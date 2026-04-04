@@ -1,0 +1,152 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* src/App.css - Shto këto rreshta */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home-actions {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.action-btn:nth-child(1) {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+}
+
+.action-btn:nth-child(2) {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+}
+
+.action-btn:nth-child(3) {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.sample-jobs {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.sample-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.sample-job-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s;
+}
+
+.sample-job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sample-job-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+}
+
+.sample-job-card p {
+  color: #718096;
+  margin: 0 0 1rem 0;
+}
+
+.view-job-link {
+  color: #4299e1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.view-job-link:hover {
+  text-decoration: underline;
+}
+
+/* Stilet për main content pas navbar */
+.main-content {
+  padding-top: 80px; /* Lartësia e navbar + padding */
+  min-height: calc(100vh - 80px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-actions {
+    flex-direction: column;
+  }
+  
+  .action-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .sample-jobs-grid {
+    grid-template-columns: 1fr;
+  }
+}

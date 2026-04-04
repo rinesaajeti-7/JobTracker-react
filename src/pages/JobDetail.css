@@ -1,0 +1,547 @@
+/* src/pages/JobDetail.css - Version i përditësuar */
+.job-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Butoni back */
+.back-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #0056b3;
+}
+
+/* Header i punës */
+.job-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  margin-bottom: 25px;
+}
+
+.job-header h1 {
+  margin: 0 0 15px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.company-info h2 {
+  margin: 0;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.location {
+  background: rgba(255,255,255,0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.remote-badge {
+  background: rgba(40, 167, 69, 0.9);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.job-header-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.job-type-badge, .salary-badge, .date-badge {
+  background: rgba(255,255,255,0.15);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  backdrop-filter: blur(10px);
+}
+
+/* Tags */
+.job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.job-tags strong {
+  color: #333;
+  margin-right: 10px;
+}
+
+.tag {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.tag:hover {
+  background: #bbdefb;
+  transform: translateY(-2px);
+}
+
+/* Layout i përmbajtjes */
+.job-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.job-description-card, .job-sidebar > div {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border: 1px solid #eaeaea;
+}
+
+.description-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #007bff;
+}
+
+.description-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.description-status {
+  background: #f8f9fa;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.description-text {
+  line-height: 1.8;
+  color: #444;
+  font-size: 16px;
+}
+
+.job-description-paragraph {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.show-more-btn, .show-less-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: 500;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.show-more-btn:hover, .show-less-btn:hover {
+  background: #545b62;
+}
+
+.show-less-btn {
+  background: #dc3545;
+}
+
+.show-less-btn:hover {
+  background: #c82333;
+}
+
+/* Sidebar */
+.job-actions-card h4 {
+  margin-top: 0;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.apply-btn-primary, .apply-btn-external {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s;
+}
+
+.apply-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.apply-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(102, 126, 234, 0.4);
+}
+
+.apply-btn-primary:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.apply-btn-external {
+  background: #28a745;
+  color: white;
+}
+
+.apply-btn-external:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.apply-note {
+  text-align: center;
+  margin: 10px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Meta card me ikona */
+.meta-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.meta-item:hover {
+  background: #e9ecef;
+}
+
+.meta-icon {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.meta-content {
+  flex: 1;
+}
+
+.meta-content strong {
+  display: block;
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.meta-content span {
+  color: #333;
+  font-weight: 500;
+}
+
+.demo-notice {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.demo-notice strong {
+  display: block;
+  color: #856404;
+  margin-bottom: 5px;
+}
+
+.demo-notice small {
+  color: #856404;
+  font-size: 13px;
+}
+
+/* Seksioni i punëve të ngjashme */
+.similar-jobs-section {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-top: 30px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-header h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Grid i punëve të ngjashme */
+.similar-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.similar-job-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border: 1px solid #eaeaea;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.similar-job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  border-color: #007bff;
+}
+
+.similar-job-header {
+  margin-bottom: 15px;
+}
+
+.similar-job-header h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.similar-job-company {
+  color: #666;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.similar-job-details {
+  flex: 1;
+}
+
+.similar-job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.similar-job-location, .similar-job-remote, .similar-job-type {
+  background: #f1f3f4;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 13px;
+  color: #555;
+}
+
+.similar-job-salary {
+  color: #28a745;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.similar-job-description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.similar-job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.similar-job-tag {
+  background: #e9ecef;
+  color: #495057;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.view-similar-job-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.view-similar-job-btn:hover {
+  background: #0056b3;
+}
+
+/* Butonat për më shumë */
+.view-more-container {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.view-more-btn {
+  background: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.view-more-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Loading dhe mesazhe */
+.loading-similar {
+  text-align: center;
+  padding: 50px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.no-similar-jobs {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.no-jobs-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.no-similar-jobs h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.no-similar-jobs p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.browse-jobs-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .job-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .similar-jobs-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .job-header {
+    padding: 20px;
+  }
+  
+  .job-header h1 {
+    font-size: 24px;
+  }
+  
+  .similar-jobs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .company-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
