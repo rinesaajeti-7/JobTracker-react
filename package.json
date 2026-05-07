@@ -6,11 +6,12 @@
     "@types/recharts": "^1.8.29",
     "@useresume/sdk": "^1.0.0",
     "lucide-react": "^0.562.0",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^6.30.3",
     "react-scripts": "5.0.1",
-    "recharts": "^3.7.0"
+    "recharts": "^3.7.0",
+    "typescript": "^4.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
